@@ -1,4 +1,4 @@
-<%- model_class = Attribute -%>
+<%- model_class = Detail -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -18,7 +18,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @attributes.each do |attribute| %>
+    <% @details.each do |attribute| %>
       <tr>
         <td><%= link_to attribute.id, attribute_path(attribute) %></td>
         <td><%= attribute.product_id %></td>

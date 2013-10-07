@@ -23,8 +23,9 @@
       <%= f.text_field :owner_id, :class => 'text_field' %>
     </div>
   </div>
-    <%= f.fields_for :attributes do |a|%>
-
+    <%= f.fields_for :details do |a|%>
+      <%= a.label :title, 'Title' %> </br>
+      <%= a.text_field :title %>
     <% end %>
 
   <div class="form-actions">

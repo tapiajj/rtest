@@ -1,6 +1,6 @@
-class CreateAttributes < ActiveRecord::Migration
+class CreateDetails < ActiveRecord::Migration
   def change
-    create_table :attributes do |t|
+    create_table :details do |t|
       t.integer :product_id
       t.string :title
       t.string :short_desc
@@ -11,6 +11,6 @@ class CreateAttributes < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index("attributes","product_id")
+    add_index("details","product_id")
   end
 end

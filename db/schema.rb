@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20131007020136) do
 
-  create_table "attributes", force: true do |t|
+  create_table "details", force: true do |t|
     t.integer  "product_id"
     t.string   "title"
     t.string   "short_desc"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20131007020136) do
     t.datetime "updated_at"
   end
 
-  add_index "attributes", ["product_id"], name: "index_attributes_on_product_id"
+  add_index "details", ["product_id"], name: "index_details_on_product_id"
 
   create_table "products", force: true do |t|
     t.string   "title"

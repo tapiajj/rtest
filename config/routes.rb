@@ -1,6 +1,6 @@
 VendemeV1::Application.routes.draw do
 
-  resources :attributes
+  resources :details
 
   resources :products
 

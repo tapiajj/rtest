@@ -2,13 +2,13 @@ require 'test_helper'
 
 class AttributesControllerTest < ActionController::TestCase
   setup do
-    @attribute = attributes(:one)
+    @detail = attributes(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:attributes)
+    assert_not_nil assigns(:details)
   end
 
   test "should get new" do
@@ -18,30 +18,30 @@ class AttributesControllerTest < ActionController::TestCase
 
   test "should create attribute" do
     assert_difference('Attribute.count') do
-      post :create, attribute: { description: @attribute.description, limit: @attribute.limit, picture: @attribute.picture, price: @attribute.price, product_id: @attribute.product_id, short_desc: @attribute.short_desc, title: @attribute.title }
+      post :create, detail: { description: @detail.description, limit: @detail.limit, picture: @detail.picture, price: @detail.price, product_id: @detail.product_id, short_desc: @detail.short_desc, title: @detail.title }
     end
 
-    assert_redirected_to attribute_path(assigns(:attribute))
+    assert_redirected_to attribute_path(assigns(:detail))
   end
 
   test "should show attribute" do
-    get :show, id: @attribute
+    get :show, id: @detail
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @attribute
+    get :edit, id: @detail
     assert_response :success
   end
 
   test "should update attribute" do
-    patch :update, id: @attribute, attribute: { description: @attribute.description, limit: @attribute.limit, picture: @attribute.picture, price: @attribute.price, product_id: @attribute.product_id, short_desc: @attribute.short_desc, title: @attribute.title }
-    assert_redirected_to attribute_path(assigns(:attribute))
+    patch :update, id: @detail, detail: { description: @detail.description, limit: @detail.limit, picture: @detail.picture, price: @detail.price, product_id: @detail.product_id, short_desc: @detail.short_desc, title: @detail.title }
+    assert_redirected_to attribute_path(assigns(:detail))
   end
 
   test "should destroy attribute" do
     assert_difference('Attribute.count', -1) do
-      delete :destroy, id: @attribute
+      delete :destroy, id: @detail
     end
 
     assert_redirected_to attributes_path
